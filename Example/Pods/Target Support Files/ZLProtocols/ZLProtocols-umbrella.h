@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ZLMainModuleProto.h"
 #import "ZLTestModule1Proto.h"
 #import "ZLTestModule2Proto.h"
 #import "ZLTestModule3Proto.h"

@@ -8,14 +8,14 @@
 
 #import "ZLViewController.h"
 #import <ZLProtoService/ZLProtoService.h>
-
+#import <ZLProtocols/ZLTestModule1Proto.h>
 @protocol ZLTest <NSObject>
 
 - (void)test;
 
 @end
 
-@interface ZLViewController ()<ZLTest>
+@interface ZLViewController ()
 
 @end
 
@@ -24,9 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [ZLProtoService registerProtocol:@protocol(ZLTest) implClass:ZLViewController.class];
+    
     ZLProtoService.interceptInvokeBlock = ^(NSInvocation * _Nonnull invocation, BOOL * _Nonnull stop) {
-        *stop = YES;
         NSLog(@"interceptInvokeBlock");
     };
     ZLProtoService.willInvokeBlock = ^(NSInvocation * _Nonnull invocation) {
@@ -37,17 +36,19 @@
         NSLog(@"didInvokeBlock");
 
     };
-    id<ZLTest> impl = ZLGET_PROTO_IMPL(ZLTest);
-    [impl test];
+   
 }
-- (void)test {
-    NSLog(@"%@",NSStringFromSelector(_cmd));
-}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)jumpModul1:(id)sender {
+    id<ZLTestModule1Proto> impl1 = ZLGET_PROTO_IMPL(ZLTestModule1Proto);
+    UIViewController *vc1 = [impl1 jumpVC1];
+    [self.navigationController pushViewController:vc1 animated:YES];
 }
 
 @end

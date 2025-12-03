@@ -102,7 +102,7 @@ static ZLProtoService *instance;
     if ([implClass conformsToProtocol:protocol]) {
         ZLProtoService.share.proto_class_map[NSStringFromProtocol(protocol)] = implClass;
     }else {
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@没有遵守%@协议",implClass,protocol] userInfo:nil];
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@没有遵守%@协议",implClass,NSStringFromProtocol(protocol)] userInfo:nil];
     }
 }
 /// 3. 获取协议对应的实例对象
