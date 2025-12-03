@@ -1,0 +1,32 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - ZLProtoService (0.1.1)
+  - ZLTestModule3 (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - ZLProtoService (from `../../`)
+  - ZLTestModule3 (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  ZLProtoService:
+    :path: "../../"
+  ZLTestModule3:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  ZLProtoService: 36f1e6a44e9af5b8154e1828c8f23482cecd4b4a
+  ZLTestModule3: 50a3dbcdd1bbedbdf69a4549d7a636b3f28a04d4
+
+PODFILE CHECKSUM: b6cbd7299035cb7bcb388d496504cf92303e2a5d
+
+COCOAPODS: 1.16.2

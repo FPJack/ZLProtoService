@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ZLProtocols_Example' do
+  pod 'ZLProtocols', :path => '../'
+
+  target 'ZLProtocols_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
