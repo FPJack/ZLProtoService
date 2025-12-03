@@ -39,6 +39,14 @@ pod 'ZLProtoService'
  
 ```
 
+### 无需注册协议与实现类，直接通过协议获取实现类实例
+```ruby
+ 如果ZLTest的实现类名为ZLTestImpl，则无需注册，直接通过协议获取实现类实例
+ id<ZLTest> impl = [ZLProtoService instanceForProtocol:@protocol(ZLTest)];
+ [impl test];
+ 
+```
+
 ### 宏定义写法
 ```ruby
     注册协议与实现类
