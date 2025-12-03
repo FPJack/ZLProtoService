@@ -8,7 +8,11 @@
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 @protocol ZLImplProto <NSObject>
-+ (id)share;
+///如果要实现单例和自定义实例化方式，可以实现下面两个方法
+// Singleton单例实现
++ (instancetype)share;
+// 普通创建实例
++ (instancetype)createInstance;
 @end
 
 @interface ZLImplProxy : NSProxy
@@ -22,24 +26,30 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class) void(^willInvokeBlock)(NSInvocation *invocation);
 /// 方法调用后置回调
 @property (class) void(^didInvokeBlock)(NSInvocation *invocation);
+
+@property (class) BOOL allowOverwriteRegister; // default NO
 /// 1. 根据协议获取其实现类,如果没有注册会自动尝试获取协议名拼接Impl的类对象，例如传入ZLProtocol会获取对应ZLProtocolImpl类
 + (Class)classForProtocol:(Protocol *)protocol;
 /// 2. 注册协议与实现类
 + (void)registerProtocol:(Protocol *)protocol implClass:(Class)implClass;
 /// 3. 获取协议对应的实例对象,优先读缓存
 + (id )instanceForProtocol:(Protocol *)protocol;
-/// 4.是否从缓存获取协议对应的实例对象
+/// 4.获取协议对应的实例对象,是否缓存起来
 + (id )instanceForProtocol:(Protocol *)protocol shouldCache:(BOOL)shouldCache;
 @end
 
 ///注册协议
-#define ZLRegisterProtoForClass(protocolName, cls) \
+#define zl_register_proto_for_class(protocolName, cls) \
 __attribute__((constructor)) \
 static void _ZLRegisterProtocol_##cls(void) { \
     [ZLProtoService registerProtocol:@protocol(protocolName) implClass:[cls class]]; \
 }
 
 ///根据协议获取实现对象
-#define ZLGET_PROTO_IMPL(p) [ZLProtoService instanceForProtocol:@protocol(p)]
+#define zl_get_proto_impl(p) [ZLProtoService instanceForProtocol:@protocol(p)]
+
+///根据协议获取实现对象的代理,方法调用的时候可进行拦截
+#define zl_get_proto_proxy_impl(p) [ZLImplProxy proxyImpl:[ZLProtoService instanceForProtocol:@protocol(p)]]
+
 
 NS_ASSUME_NONNULL_END

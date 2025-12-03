@@ -67,7 +67,7 @@
 
 // 5️⃣ 点击事件
 - (void)jumpButtonTapped:(UIButton *)sender {
-    id<ZLTestModule1Proto> impl1 = ZLGET_PROTO_IMPL(ZLTestModule1Proto);
+    id<ZLTestModule1Proto> impl1 = zl_get_proto_impl(ZLTestModule1Proto);
     UIViewController *vc1 = [impl1 jumpVC1];
     [self.navigationController pushViewController:vc1 animated:YES];
 }

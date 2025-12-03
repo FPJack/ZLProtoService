@@ -9,7 +9,7 @@
 #import "ZLMainImpl.h"
 #import "ZLViewController.h"
 
-ZLRegisterProtoForClass(ZLMainModuleProto, ZLMainImpl)
+zl_register_proto_for_class(ZLMainModuleProto, ZLMainImpl)
 @implementation ZLMainImpl
 - (UIViewController *)mainVC {
     return ZLViewController.new;

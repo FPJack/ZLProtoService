@@ -19,6 +19,13 @@ static ZLProtoService *instance;
 - (BOOL)respondsToSelector:(SEL)aSelector {
     return [self.impl respondsToSelector:aSelector];
 }
+- (BOOL)isKindOfClass:(Class)aClass {
+    return [self.impl isKindOfClass:aClass];
+}
+- (BOOL)isMemberOfClass:(Class)aClass {
+    return [self.impl isMemberOfClass:aClass];
+}
+
 - (Class)class {
     return self.impl.class;
 }
@@ -52,6 +59,8 @@ static ZLProtoService *instance;
 @property (nonatomic, copy) void(^interceptInvokeBlock)(NSInvocation *invocation, BOOL *stop);
 @property (nonatomic, copy) void(^willInvokeBlock)(NSInvocation *invocation);
 @property (nonatomic, copy) void(^didInvokeBlock)(NSInvocation *invocation);
+@property (nonatomic,assign) BOOL allowOverwriteRegister; // default NO
+
 @end
 @implementation ZLProtoService
 + (instancetype)share {
@@ -82,6 +91,12 @@ static ZLProtoService *instance;
 + (void (^)(NSInvocation * _Nonnull))didInvokeBlock {
     return ZLProtoService.share.didInvokeBlock;
 }
++ (BOOL)allowOverwriteRegister {
+    return ZLProtoService.share.allowOverwriteRegister;
+}
++ (void)setAllowOverwriteRegister:(BOOL)allowOverwriteRegister {
+    ZLProtoService.share.allowOverwriteRegister = allowOverwriteRegister;
+}
 /// 1. 根据协议获取其实现类
 + (Class)classForProtocol:(Protocol *)protocol{
     if (!protocol) return nil;
@@ -100,6 +115,12 @@ static ZLProtoService *instance;
 /// 2. 注册协议与实现类
 + (void)registerProtocol:(Protocol *)protocol implClass:(Class)implClass{
     if ([implClass conformsToProtocol:protocol]) {
+        NSString *key = NSStringFromProtocol(protocol);
+        if (ZLProtoService.share.proto_class_map[key]) {
+            if (!ZLProtoService.share.allowOverwriteRegister) {
+                @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"协议%@已经注册过实现类%@",key,NSStringFromClass(ZLProtoService.share.proto_class_map[key])] userInfo:nil];
+            }
+        }
         ZLProtoService.share.proto_class_map[NSStringFromProtocol(protocol)] = implClass;
     }else {
         @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@没有遵守%@协议",implClass,NSStringFromProtocol(protocol)] userInfo:nil];
@@ -112,19 +133,24 @@ static ZLProtoService *instance;
 ///
 + (id)instanceForProtocol:(Protocol *)protocol shouldCache:(BOOL)shouldCache{
     if(!protocol) return nil;
-    id impl;
-    if (shouldCache) {
-        impl = ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)];
-        if (impl) return impl;
-    }
+    id impl = ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)];
+    if (impl) return impl;
     Class cls = [self classForProtocol:protocol];
     if(!cls) return nil;
     if ([cls conformsToProtocol:@protocol(ZLImplProto)]) {
-        impl = [ZLImplProxy proxyImpl:[cls share]];
+        if ([cls respondsToSelector:@selector(share)]) {
+            impl = [cls share];
+        }else if ([cls respondsToSelector:@selector(createInstance)]){
+            impl = [cls createInstance];
+        }else{
+            impl = [[cls alloc] init];
+        }
     }else{
-        impl = [ZLImplProxy proxyImpl:[[cls alloc] init]];
+        impl = [[cls alloc] init];
     }
-    ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)] = impl;
+    if (shouldCache) {
+        ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)] = impl;
+    }
     return impl;
 }
 @end
