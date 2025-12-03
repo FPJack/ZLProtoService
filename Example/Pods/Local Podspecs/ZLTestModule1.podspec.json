@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "ZLTestModule1/Classes/**/*",
+  "source_files": "ZLTestModule1/Classes/**/*.{h,m,swift}",
   "dependencies": {
     "ZLProtoService": [
 
@@ -26,5 +26,8 @@
     "ZLProtocols": [
 
     ]
-  }
+  },
+  "resources": [
+    "ZLTestModule1/Classes/*.xib"
+  ]
 }
