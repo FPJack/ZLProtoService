@@ -27,17 +27,14 @@ static ZLProtoService *instance;
     if (ZLProtoService.interceptInvokeBlock) {
         ZLProtoService.interceptInvokeBlock(invocation,&stop);
     }
-    if (!stop) {
-        if (ZLProtoService.willInvokeBlock) {
-            ZLProtoService.willInvokeBlock(invocation);
-        }
-        [invocation invokeWithTarget:self.impl];
-        if (ZLProtoService.didInvokeBlock) {
-            ZLProtoService.didInvokeBlock(invocation);
-        }
-        return;
+    if (stop) return;
+    if (ZLProtoService.willInvokeBlock) {
+        ZLProtoService.willInvokeBlock(invocation);
     }
     [invocation invokeWithTarget:self.impl];
+    if (ZLProtoService.didInvokeBlock) {
+        ZLProtoService.didInvokeBlock(invocation);
+    }
 }
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
     NSMethodSignature *signature = [self.impl methodSignatureForSelector:sel];
@@ -61,9 +58,12 @@ static ZLProtoService *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
+        instance.proto_class_map = NSMutableDictionary.dictionary;
+        instance.proto_impl_map = NSMutableDictionary.dictionary;
     });
     return instance;
 }
+
 + (void)setInterceptInvokeBlock:(void (^)(NSInvocation * _Nonnull, BOOL * _Nonnull))interceptInvokeBlock {
     ZLProtoService.share.interceptInvokeBlock = interceptInvokeBlock;
 }
@@ -120,12 +120,11 @@ static ZLProtoService *instance;
     Class cls = [self classForProtocol:protocol];
     if(!cls) return nil;
     if ([cls conformsToProtocol:@protocol(ZLImplProto)]) {
-        impl = [cls share];
-        return impl;
+        impl = [ZLImplProxy proxyImpl:[cls share]];
     }else{
-        impl = [[cls alloc] init];
-        ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)] = impl;
-        return impl;
+        impl = [ZLImplProxy proxyImpl:[[cls alloc] init]];
     }
+    ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)] = impl;
+    return impl;
 }
 @end

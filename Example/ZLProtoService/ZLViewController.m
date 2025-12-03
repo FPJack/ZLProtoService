@@ -7,8 +7,15 @@
 //
 
 #import "ZLViewController.h"
+#import <ZLProtoService/ZLProtoService.h>
 
-@interface ZLViewController ()
+@protocol ZLTest <NSObject>
+
+- (void)test;
+
+@end
+
+@interface ZLViewController ()<ZLTest>
 
 @end
 
@@ -17,7 +24,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [ZLProtoService registerProtocol:@protocol(ZLTest) implClass:ZLViewController.class];
+    ZLProtoService.interceptInvokeBlock = ^(NSInvocation * _Nonnull invocation, BOOL * _Nonnull stop) {
+        *stop = YES;
+        NSLog(@"interceptInvokeBlock");
+    };
+    ZLProtoService.willInvokeBlock = ^(NSInvocation * _Nonnull invocation) {
+        NSLog(@"willInvokeBlock");
+
+    };
+    ZLProtoService.didInvokeBlock = ^(NSInvocation * _Nonnull invocation) {
+        NSLog(@"didInvokeBlock");
+
+    };
+    id<ZLTest> impl = GET_PROTO_IMPL(@protocol(ZLTest));
+    [impl test];
+}
+- (void)test {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
 - (void)didReceiveMemoryWarning
