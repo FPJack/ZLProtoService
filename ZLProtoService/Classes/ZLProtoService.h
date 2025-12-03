@@ -27,9 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 方法调用后置回调
 @property (class) void(^didInvokeBlock)(NSInvocation *invocation);
 
+/// 是否允许覆盖注册实现类
 @property (class) BOOL allowOverwriteRegister; // default NO
 /// 1. 根据协议获取其实现类,如果没有注册会自动尝试获取协议名拼接Impl的类对象，例如传入ZLProtocol会获取对应ZLProtocolImpl类
 + (Class)classForProtocol:(Protocol *)protocol;
+
+/// 1.1 默认的协议实现类获取方式 协议名 + Impl
++ (Class)defaultImplClassForProtocol:(Protocol *)protocol;
+
 /// 2. 注册协议与实现类
 + (void)registerProtocol:(Protocol *)protocol implClass:(Class)implClass;
 /// 3. 获取协议对应的实例对象,优先读缓存

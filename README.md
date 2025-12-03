@@ -62,11 +62,24 @@ pod 'ZLProtoService'
  
 ```
 
+### 如果要实现协议实现对象是单例和自定义实例化方式，可以遵守ZLImplProto协议实现下面相对应两个方法
+```ruby
+
+    @protocol ZLImplProto <NSObject>
+    // Singleton单例实现
+    + (instancetype)share;
+    // 普通创建实例
+    + (instancetype)createInstance;
+    @end
+    
+ 
+```
+
 
 
 ## Author
 
-fanpeng, peng.fan@ukelink.com
+fanpeng, 2551412939@qq.com
 
 ## License
 
