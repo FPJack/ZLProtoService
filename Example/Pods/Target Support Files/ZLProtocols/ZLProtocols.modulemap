@@ -1,0 +1,6 @@
+framework module ZLProtocols {
+  umbrella header "ZLProtocols-umbrella.h"
+
+  export *
+  module * { export * }
+}

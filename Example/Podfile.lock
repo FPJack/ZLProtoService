@@ -4,24 +4,50 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ZLProtoService (0.1.0)
+  - ZLProtocols (0.1.0)
+  - ZLProtoService (0.1.1)
+  - ZLTestModule1 (0.1.0):
+    - ZLProtocols
+    - ZLProtoService
+  - ZLTestModule2 (0.1.0):
+    - ZLProtocols
+    - ZLProtoService
+  - ZLTestModule3 (0.1.0):
+    - ZLProtocols
+    - ZLProtoService
 
 DEPENDENCIES:
   - FBSnapshotTestCase
+  - ZLProtocols (from `../ZLProtocols`)
   - ZLProtoService (from `../`)
+  - ZLTestModule1 (from `../ZLTestModule1`)
+  - ZLTestModule2 (from `../ZLTestModule2`)
+  - ZLTestModule3 (from `../ZLTestModule3`)
 
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
+  ZLProtocols:
+    :path: "../ZLProtocols"
   ZLProtoService:
     :path: "../"
+  ZLTestModule1:
+    :path: "../ZLTestModule1"
+  ZLTestModule2:
+    :path: "../ZLTestModule2"
+  ZLTestModule3:
+    :path: "../ZLTestModule3"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ZLProtoService: a1555959b01532ca3f10471e2f51d3d23e4cefd5
+  ZLProtocols: 2fade284c967b555c9aefccfbf0259eedbf16657
+  ZLProtoService: 36f1e6a44e9af5b8154e1828c8f23482cecd4b4a
+  ZLTestModule1: 9842edf9d220f715a21368b9347d109c6a9c48b4
+  ZLTestModule2: 11774b799b842de5a0dca0564d6321a38c83ccd4
+  ZLTestModule3: 713f89ca15c9c4452f252c747c9fb62da56ee2b4
 
-PODFILE CHECKSUM: 17d2281e2387781a3bf42dfa06372f7ef9917be4
+PODFILE CHECKSUM: 245eef30969230a83510db5ab305b614fcd11b7d
 
 COCOAPODS: 1.16.2

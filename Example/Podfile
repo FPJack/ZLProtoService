@@ -4,6 +4,10 @@ platform :ios, '10.0'
 
 target 'ZLProtoService_Example' do
   pod 'ZLProtoService', :path => '../'
+  pod 'ZLTestModule1', :path => '../ZLTestModule1'
+  pod 'ZLTestModule2', :path => '../ZLTestModule2'
+  pod 'ZLTestModule3', :path => '../ZLTestModule3'
+  pod 'ZLProtocols', :path => '../ZLProtocols'
 
   target 'ZLProtoService_Tests' do
     inherit! :search_paths

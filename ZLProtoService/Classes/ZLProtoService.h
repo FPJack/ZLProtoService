@@ -27,10 +27,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 2. 注册协议与实现类
 + (void)registerProtocol:(Protocol *)protocol implClass:(Class)implClass;
 /// 3. 获取协议对应的实例对象,优先读缓存
-+ (NSObject *)instanceForProtocol:(Protocol *)protocol;
++ (id )instanceForProtocol:(Protocol *)protocol;
 /// 4.是否从缓存获取协议对应的实例对象
-+ (NSObject *)instanceForProtocol:(Protocol *)protocol shouldCache:(BOOL)shouldCache;
++ (id )instanceForProtocol:(Protocol *)protocol shouldCache:(BOOL)shouldCache;
 @end
-#define GET_PROTO_IMPL(p) [ZLProtoService instanceForProtocol:p]
+
+///注册协议
+#define ZLRegisterProtoForClass(protocolName, cls) \
+__attribute__((constructor)) \
+static void _ZLRegisterProtocol_##cls(void) { \
+    [ZLProtoService registerProtocol:@protocol(protocolName) implClass:[cls class]]; \
+}
+
+///根据协议获取实现对象
+#define ZLGET_PROTO_IMPL(p) [ZLProtoService instanceForProtocol:@protocol(p)]
 
 NS_ASSUME_NONNULL_END

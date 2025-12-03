@@ -37,7 +37,7 @@
         NSLog(@"didInvokeBlock");
 
     };
-    id<ZLTest> impl = GET_PROTO_IMPL(@protocol(ZLTest));
+    id<ZLTest> impl = ZLGET_PROTO_IMPL(ZLTest);
     [impl test];
 }
 - (void)test {

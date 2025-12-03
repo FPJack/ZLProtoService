@@ -1,0 +1,17 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
+
+#import "ZLTestModule2VC.h"
+
+FOUNDATION_EXPORT double ZLTestModule2VersionNumber;
+FOUNDATION_EXPORT const unsigned char ZLTestModule2VersionString[];
+

@@ -177,9 +177,17 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ZLProtoService/ZLProtoService.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLProtocols/ZLProtocols.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule1/ZLTestModule1.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule2/ZLTestModule2.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule3/ZLTestModule3.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ZLProtoService/ZLProtoService.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLProtocols/ZLProtocols.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule1/ZLTestModule1.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule2/ZLTestModule2.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZLTestModule3/ZLTestModule3.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

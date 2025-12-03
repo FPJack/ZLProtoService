@@ -326,10 +326,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZLProtoService_Example/Pods-ZLProtoService_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ZLProtoService/ZLProtoService.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLProtocols/ZLProtocols.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLTestModule1/ZLTestModule1.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLTestModule2/ZLTestModule2.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLTestModule3/ZLTestModule3.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLProtoService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLProtocols.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLTestModule1.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLTestModule2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLTestModule3.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
