@@ -19,6 +19,27 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ZLProtoService'
 ```
+### 注册协议与实现类
+```ruby
+
+@protocol ZLTest
+- (void)test;
+@end
+
+
+[ZLProtoService registerProtocol:@protocol(ZLTest) implClass:ZLTestModule1VC.class];
+
+```
+
+
+### 通过协议获取实现类实例
+```ruby
+ id<ZLTest> impl = [ZLProtoService instanceForProtocol:@protocol(ZLTest)];
+ [impl test];
+ 
+```
+
+
 
 ## Author
 

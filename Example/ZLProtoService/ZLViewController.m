@@ -9,10 +9,8 @@
 #import "ZLViewController.h"
 #import <ZLProtoService/ZLProtoService.h>
 #import <ZLProtocols/ZLTestModule1Proto.h>
-@protocol ZLTest <NSObject>
-
+@protocol ZLTest
 - (void)test;
-
 @end
 
 @interface ZLViewController ()
@@ -41,6 +39,7 @@
 
     };
 
+    
     // 1️⃣ 创建按钮
     UIButton *jumpButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [jumpButton setTitle:@"跳转组件1" forState:UIControlStateNormal];

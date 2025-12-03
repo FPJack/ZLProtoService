@@ -57,7 +57,6 @@
 		C1E96D871BD5F1F0CAD090C9F16B7E22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
 		CE0DC4614B4FF855B2101D7F74A710AC /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
 		CF65A6A0F5F9A6A9FBF5501610AAD758 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5E84CCF7BB2B84DB7FA3259E61FB4BF /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FE318F8A1F16409B98E65D5E706D34 /* ReplaceMe.m */; };
 		DA747A80391988F1202FF4989A0E12CF /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E4F6CF5EA1B12C55385D3CDC6BD1F4D8 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E759C2EC9B730E3C9C562BBB533B85DC /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
@@ -171,16 +170,16 @@
 		117B78F141A5AD50EEF760A0FFA6E5D7 /* ZLTestModule1VC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLTestModule1VC.m; path = ZLTestModule1/Classes/ZLTestModule1VC.m; sourceTree = "<group>"; };
 		122EA5527F1A51A4A5A47870C3F0A4B5 /* ZLTestModule3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLTestModule3.release.xcconfig; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		1D2B44DDFFD1A025D3B92A38368B6E52 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1D2B44DDFFD1A025D3B92A38368B6E52 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		25A5B5CB681A2646EF703A16F40DD4B8 /* ZLProtocols-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZLProtocols-Info.plist"; sourceTree = "<group>"; };
-		266C56B24D21C8417270087F699DE4EC /* ZLTestModule1.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZLTestModule1.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		266C56B24D21C8417270087F699DE4EC /* ZLTestModule1.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZLTestModule1.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		26BC96F34E43FA0A3AE93B3C2C4595E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		2CD3E3EB7CBC870FA675CFE970228C26 /* Pods-ZLProtoService_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZLProtoService_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3108D7B6FED0332707267E05F8432FA9 /* ZLProtoService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLProtoService-umbrella.h"; sourceTree = "<group>"; };
-		335B9AE088051DF39F816380D92F90FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		335B9AE088051DF39F816380D92F90FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		38422ED8AB8892B1224B0C6276943B65 /* ZLProtocols-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLProtocols-dummy.m"; sourceTree = "<group>"; };
 		3C5DAD708ECEBB748663EB6599586BBB /* ZLProtocols-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLProtocols-umbrella.h"; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
@@ -189,19 +188,19 @@
 		4277139C35D8739CF8C1D5DEFA25215E /* Pods-ZLProtoService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZLProtoService_Example-umbrella.h"; sourceTree = "<group>"; };
 		44251B9DB365AAD90DF04FE9D6A41600 /* Pods-ZLProtoService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLProtoService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		463A955D0A31054FB32CFB52C2367C0B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		463A955D0A31054FB32CFB52C2367C0B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46D270C74A07D2013BC013377FF4DFFE /* ZLTestModule1-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZLTestModule1-Info.plist"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
-		4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLTestModule3; path = ZLTestModule3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLTestModule2; path = ZLTestModule2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		509FBB908F6845656802CB71E2D92589 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLTestModule3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLTestModule2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		509FBB908F6845656802CB71E2D92589 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		51CD0478C7888AD80C3D6BFB617F4A56 /* ZLTestModule2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLTestModule2-umbrella.h"; sourceTree = "<group>"; };
 		548EFC9A8F2A5D9D4008A041E796047E /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ZLTestModule2/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		57B9B73CC406A0465740488A70609811 /* ZLTestModule1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLTestModule1.release.xcconfig; sourceTree = "<group>"; };
 		58A567C259349F4129FB5E376B74EC41 /* ZLTestModule2Proto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLTestModule2Proto.h; path = ZLProtocols/Classes/ZLTestModule2Proto.h; sourceTree = "<group>"; };
 		591AA678EB4EEF5EC5D67B2104E2201A /* Pods-ZLProtoService_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZLProtoService_Tests-Info.plist"; sourceTree = "<group>"; };
-		5BB4D39040AB942323329ED04D7A2155 /* Pods-ZLProtoService_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZLProtoService_Tests"; path = Pods_ZLProtoService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB4D39040AB942323329ED04D7A2155 /* Pods_ZLProtoService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLProtoService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6B5E773973965C73BC40D4388B4C07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		607A05FA4BF6E83529E8537730EA2CB3 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ZLTestModule3/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		62C91E270C2FCC61182AA4EF6142E52E /* Pods-ZLProtoService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZLProtoService_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -210,10 +209,10 @@
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		6C8C89A1C756086F603BCEAC14557EE6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		6D88E59399740CABF45060867CC4F615 /* ZLProtocols */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLProtocols; path = ZLProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8C89A1C756086F603BCEAC14557EE6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6D88E59399740CABF45060867CC4F615 /* ZLProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F13B7B87A0D6FDCAD8FCA1BD9D92D59 /* Pods-ZLProtoService_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZLProtoService_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		73B308DDDD2D1C9E0D5777F15151DEDB /* ZLProtoService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZLProtoService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		73B308DDDD2D1C9E0D5777F15151DEDB /* ZLProtoService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZLProtoService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7D2B8CD235A82F5D0D37C3954F3B0EE5 /* Pods-ZLProtoService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZLProtoService_Example.modulemap"; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		81CDC8DC55DB8EBD82CA6CE3122B0620 /* ZLProtocols.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLProtocols.modulemap; sourceTree = "<group>"; };
@@ -223,19 +222,18 @@
 		8D7B49F34CB410900629F8D4E6FA89A3 /* ZLTestModule3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLTestModule3.modulemap; sourceTree = "<group>"; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		91C2FA8DAC406151976E25AC3A385B98 /* ZLTestModule2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLTestModule2.debug.xcconfig; sourceTree = "<group>"; };
-		92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLTestModule1; path = ZLTestModule1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLTestModule1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		95F2710C90F80CF252D0B12A43558829 /* ZLTestModule1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLTestModule1-umbrella.h"; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		97FE318F8A1F16409B98E65D5E706D34 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ZLProtocols/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		9A6B54A2BBE055E3F1A1519D8CCE2102 /* ZLTestModule1-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLTestModule1-prefix.pch"; sourceTree = "<group>"; };
-		9AD696812BFC9F029161504854C6258D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9AD696812BFC9F029161504854C6258D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9BD1847C950CEC34E8ADBB3CE079BED6 /* ZLProtoService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLProtoService.release.xcconfig; sourceTree = "<group>"; };
 		9BDD1488974B80703AD9FB804957F6E8 /* ZLTestModule3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLTestModule3.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods-ZLProtoService_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZLProtoService_Example"; path = Pods_ZLProtoService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A061248E8308D91A5AC815678B06F026 /* ZLProtoService */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLProtoService; path = ZLProtoService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods_ZLProtoService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLProtoService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A061248E8308D91A5AC815678B06F026 /* ZLProtoService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLProtoService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E08635FFC81F099BE9893B44AD3930 /* ZLTestModule1.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLTestModule1.modulemap; sourceTree = "<group>"; };
 		A57DEF8B7BB8C228BBBF1E7C0F6C5F6E /* ZLTestModule2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLTestModule2-prefix.pch"; sourceTree = "<group>"; };
 		A70A19BDB6D75E5DF1285A90FCD1CFA5 /* ZLTestModule3VC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLTestModule3VC.h; path = ZLTestModule3/Classes/ZLTestModule3VC.h; sourceTree = "<group>"; };
@@ -244,8 +242,8 @@
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		AF5694B356D177B79A201085C0F76386 /* ZLProtoService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLProtoService.h; path = ZLProtoService/Classes/ZLProtoService.h; sourceTree = "<group>"; };
 		AFC0FAAF56AA2BA9CE36FDA113ED905B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ZLTestModule1/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		AFC96CEC045AD7F0BCB0EBAF4EDA18EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		AFDF911A75B8BDDE1EAE30CE4DC87CFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		AFC96CEC045AD7F0BCB0EBAF4EDA18EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AFDF911A75B8BDDE1EAE30CE4DC87CFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B26E7FB0B7F855E468AB7453A857AC69 /* ZLProtocols.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLProtocols.release.xcconfig; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		BA8FACF50A2A19593AC39AE50C8C0555 /* Pods-ZLProtoService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLProtoService_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,9 +260,9 @@
 		DC3A7D5A969A4159C1B6784165AF9705 /* ZLTestModule2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLTestModule2.release.xcconfig; sourceTree = "<group>"; };
 		DC9634734D1EE0830CBD7E73446404B5 /* ZLProtoService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLProtoService-dummy.m"; sourceTree = "<group>"; };
 		DD3E9F46DAADE7B0A3D7D913CB456368 /* Pods-ZLProtoService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZLProtoService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E13A7EA5FAEB49B19F5429DC6742CEC2 /* ZLTestModule3.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZLTestModule3.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E1FEE8B0EFE05BB92C6594534CA1C0AF /* ZLProtocols.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZLProtocols.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E4B0DAB04B3DD9542CC0B1D4E467261D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E13A7EA5FAEB49B19F5429DC6742CEC2 /* ZLTestModule3.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZLTestModule3.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E1FEE8B0EFE05BB92C6594534CA1C0AF /* ZLProtocols.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZLProtocols.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E4B0DAB04B3DD9542CC0B1D4E467261D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E60E908B1DC832589E1709D406D3A0BC /* ZLTestModule3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLTestModule3-umbrella.h"; sourceTree = "<group>"; };
 		EB9333B6AA84A4210B30AAC2F644B285 /* ZLTestModule1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLTestModule1-dummy.m"; sourceTree = "<group>"; };
 		EC4034F4CF134B981B84D25B8D421977 /* Pods-ZLProtoService_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZLProtoService_Example-Info.plist"; sourceTree = "<group>"; };
@@ -276,11 +274,11 @@
 		FABC5E5655CA8899B3094A3D2F3909E5 /* ZLTestModule3Proto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLTestModule3Proto.h; path = ZLProtocols/Classes/ZLTestModule3Proto.h; sourceTree = "<group>"; };
 		FAE8324C996A10F5D020C32DF7C6DC9A /* ZLProtocols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLProtocols.debug.xcconfig; sourceTree = "<group>"; };
 		FC88904283A1111C69FD11EAB3D192AA /* ZLTestModule2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLTestModule2.modulemap; sourceTree = "<group>"; };
-		FD17FA8D199728E5D5C0EDEB37D3E487 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FD17FA8D199728E5D5C0EDEB37D3E487 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FEAC5D40165A44A27E637E37B2296D1C /* ZLTestModule3VC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLTestModule3VC.m; path = ZLTestModule3/Classes/ZLTestModule3VC.m; sourceTree = "<group>"; };
 		FECDCE3D5AFA6A69EB325E7830A86B52 /* Pods-ZLProtoService_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZLProtoService_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		FF8047D737BCA9A537D952A8E569D0CA /* ZLTestModule2.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZLTestModule2.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FF8047D737BCA9A537D952A8E569D0CA /* ZLTestModule2.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZLTestModule2.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,14 +388,14 @@
 		30F5837E7DBFD5D7FE7870ADC06D777F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
-				9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods-ZLProtoService_Example */,
-				5BB4D39040AB942323329ED04D7A2155 /* Pods-ZLProtoService_Tests */,
-				6D88E59399740CABF45060867CC4F615 /* ZLProtocols */,
-				A061248E8308D91A5AC815678B06F026 /* ZLProtoService */,
-				92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1 */,
-				5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2 */,
-				4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3 */,
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
+				9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods_ZLProtoService_Example.framework */,
+				5BB4D39040AB942323329ED04D7A2155 /* Pods_ZLProtoService_Tests.framework */,
+				6D88E59399740CABF45060867CC4F615 /* ZLProtocols.framework */,
+				A061248E8308D91A5AC815678B06F026 /* ZLProtoService.framework */,
+				92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1.framework */,
+				5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2.framework */,
+				4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,7 +510,6 @@
 		948832EE4B2C3C5D46152BC4CE9DAAFD /* ZLProtocols */ = {
 			isa = PBXGroup;
 			children = (
-				97FE318F8A1F16409B98E65D5E706D34 /* ReplaceMe.m */,
 				A8248F4FCCDEC7D28EC0C64595F846EF /* ZLMainModuleProto.h */,
 				0AA213DCDEF5212085F7400F902C8890 /* ZLTestModule1Proto.h */,
 				58A567C259349F4129FB5E376B74EC41 /* ZLTestModule2Proto.h */,
@@ -586,7 +583,6 @@
 				B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */,
 				906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -809,7 +805,7 @@
 			);
 			name = ZLProtoService;
 			productName = ZLProtoService;
-			productReference = A061248E8308D91A5AC815678B06F026 /* ZLProtoService */;
+			productReference = A061248E8308D91A5AC815678B06F026 /* ZLProtoService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		59FFD6E20479C3357F4C2C40C7DDA22E /* Pods-ZLProtoService_Example */ = {
@@ -832,7 +828,7 @@
 			);
 			name = "Pods-ZLProtoService_Example";
 			productName = Pods_ZLProtoService_Example;
-			productReference = 9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods-ZLProtoService_Example */;
+			productReference = 9EA50B0462E2803A781D9EA4A0FA87A1 /* Pods_ZLProtoService_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		81AC331554E0A2F2B9EEAB50614F3708 /* ZLTestModule1 */ = {
@@ -852,7 +848,7 @@
 			);
 			name = ZLTestModule1;
 			productName = ZLTestModule1;
-			productReference = 92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1 */;
+			productReference = 92972F5A014F74C895654AD56AF58B55 /* ZLTestModule1.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		842FFB3DC5DDC7264093C241B0EF3E1C /* Pods-ZLProtoService_Tests */ = {
@@ -872,7 +868,7 @@
 			);
 			name = "Pods-ZLProtoService_Tests";
 			productName = Pods_ZLProtoService_Tests;
-			productReference = 5BB4D39040AB942323329ED04D7A2155 /* Pods-ZLProtoService_Tests */;
+			productReference = 5BB4D39040AB942323329ED04D7A2155 /* Pods_ZLProtoService_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */ = {
@@ -890,7 +886,7 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */;
+			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		99C494259EA604DD3AC93E889FA411EF /* ZLTestModule2 */ = {
@@ -910,7 +906,7 @@
 			);
 			name = ZLTestModule2;
 			productName = ZLTestModule2;
-			productReference = 5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2 */;
+			productReference = 5096BAF53C3A6C5778147B39718D6B22 /* ZLTestModule2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A0BE57DAA84BD2D5A4A295523713DFD5 /* ZLTestModule3 */ = {
@@ -930,7 +926,7 @@
 			);
 			name = ZLTestModule3;
 			productName = ZLTestModule3;
-			productReference = 4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3 */;
+			productReference = 4CE03D76F2FB03E29457C49DB85FF40C /* ZLTestModule3.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BE46E9BA1427C1CFAEB4E731346C2CC6 /* ZLProtocols */ = {
@@ -948,7 +944,7 @@
 			);
 			name = ZLProtocols;
 			productName = ZLProtocols;
-			productReference = 6D88E59399740CABF45060867CC4F615 /* ZLProtocols */;
+			productReference = 6D88E59399740CABF45060867CC4F615 /* ZLProtocols.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -969,8 +965,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 30F5837E7DBFD5D7FE7870ADC06D777F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1102,7 +1096,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E84CCF7BB2B84DB7FA3259E61FB4BF /* ReplaceMe.m in Sources */,
 				B9E70F984DF60CD5E86906270A35524A /* ZLProtocols-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1654,8 +1647,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
