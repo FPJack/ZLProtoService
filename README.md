@@ -41,14 +41,14 @@ pod 'ZLProtoService'
 
 ### 宏定义写法
 ```ruby
-   注册协议与实现类
+    注册协议与实现类
     zl_register_proto_for_class(ZLTest, ZLTestModule1VC);
     
     通过协议获取实现类实例
     id<ZLTest> impl = zl_instance_for_proto(ZLTest);
     [impl test];
     
-   通过协议获取实现类实例代理对象
+    通过协议获取实现类实例代理对象（这种方式获取impl方法调用的时候会走block拦截）
     id<ZLTest> implProxy = zl_instance_proxy_for_proto(ZLTest);
     [implProxy test];
  
