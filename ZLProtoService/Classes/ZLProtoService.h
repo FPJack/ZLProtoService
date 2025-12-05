@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ZLImplProxy : NSProxy
-+ (ZLImplProxy *)proxyImpl:(NSObject *)impl;
++ (id)proxyImpl:(NSObject *)impl;
 @end
 
 @interface ZLProtoService : NSObject

@@ -9,9 +9,11 @@
 #import "ZLViewController.h"
 #import <ZLProtoService/ZLProtoService.h>
 #import <ZLProtocols/ZLTestModule1Proto.h>
+#import "ZLProtoService_Example-Swift.h"
 @protocol ZLTest
 - (void)test;
 @end
+
 
 @interface ZLViewController ()
 
@@ -26,6 +28,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    
+    
     
     ZLProtoService.interceptInvokeBlock = ^(NSInvocation * _Nonnull invocation, BOOL * _Nonnull stop) {
         NSLog(@"interceptInvokeBlock");
@@ -62,8 +67,14 @@
         [jumpButton.widthAnchor constraintEqualToConstant:120],
         [jumpButton.heightAnchor constraintEqualToConstant:44]
     ]];
+     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"跳转swiftVC" style:UIBarButtonItemStylePlain target:self action:@selector(jumpSwiftVC)];
+    
 }
-
+- (void)jumpSwiftVC {
+    id<SwiftTest> impl = zl_get_proto_impl(SwiftTest);
+    [self.navigationController pushViewController:impl.getSwiftVC animated:YES];
+}
 // 5️⃣ 点击事件
 - (void)jumpButtonTapped:(UIButton *)sender {
     id<ZLTestModule1Proto> impl1 = zl_get_proto_impl(ZLTestModule1Proto);

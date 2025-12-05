@@ -11,7 +11,7 @@ static ZLProtoService *instance;
 @property (nonatomic,strong,readwrite)NSObject* impl;
 @end
 @implementation ZLImplProxy
-+ (ZLImplProxy *)proxyImpl:(NSObject *)impl {
++ (id)proxyImpl:(NSObject *)impl {
     ZLImplProxy *proxy = [ZLImplProxy alloc];
     proxy.impl = impl;
     return proxy;

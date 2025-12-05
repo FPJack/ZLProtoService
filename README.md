@@ -62,6 +62,26 @@ pod 'ZLProtoService'
  
 ```
 
+### Swift用法
+```swift
+    ///swift通过懒加载无感注册最方便,定义一个协议名，协议的实现对象 = 协议名 + Impl 
+    @objc
+    protocol SwiftTest: NSObjectProtocol {
+        func getSwiftVC() -> UIViewController
+    }
+    @objc class SwiftTestImpl: NSObject,SwiftTest {
+        func getSwiftVC() -> UIViewController {
+            return SwiftViewController()
+        }
+    }
+    
+    let impl = ZLProtoService.instance(for: SwiftTest.self) as! SwiftTest
+    impl.getSwiftVC()
+    
+}
+ 
+```
+
 ### 如果要实现协议实现对象是单例和自定义实例化方式，可以遵守ZLImplProto协议实现下面相对应两个方法
 ```ruby
 

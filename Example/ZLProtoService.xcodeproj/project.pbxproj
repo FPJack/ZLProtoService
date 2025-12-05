@@ -22,6 +22,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		845349A62EE1249200E7AA19 /* SwiftTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845349A52EE1249200E7AA19 /* SwiftTestImpl.swift */; };
+		848F9B012EE26D7900668D64 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848F9B002EE26D7900668D64 /* SwiftViewController.xib */; };
+		848F9B022EE26D7900668D64 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9AFF2EE26D7900668D64 /* SwiftViewController.swift */; };
 		84EA1D962EDFF37E003D0084 /* ZLMainImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EA1D952EDFF37E003D0084 /* ZLMainImpl.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		874B359666E7C38A35E16568 /* Pods_ZLProtoService_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6777B885043D44D70CDF94B8 /* Pods_ZLProtoService_Tests.framework */; };
@@ -62,6 +65,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6777B885043D44D70CDF94B8 /* Pods_ZLProtoService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLProtoService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		845349A22EE123E600E7AA19 /* ZLProtoService_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZLProtoService_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		845349A52EE1249200E7AA19 /* SwiftTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestImpl.swift; sourceTree = "<group>"; };
+		848F9AFF2EE26D7900668D64 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		848F9B002EE26D7900668D64 /* SwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
 		84EA1D942EDFF37E003D0084 /* ZLMainImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLMainImpl.h; sourceTree = "<group>"; };
 		84EA1D952EDFF37E003D0084 /* ZLMainImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLMainImpl.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,9 +160,13 @@
 				6003F5A6195388D20070C39A /* ZLViewController.m */,
 				84EA1D942EDFF37E003D0084 /* ZLMainImpl.h */,
 				84EA1D952EDFF37E003D0084 /* ZLMainImpl.m */,
+				845349A52EE1249200E7AA19 /* SwiftTestImpl.swift */,
+				848F9AFF2EE26D7900668D64 /* SwiftViewController.swift */,
+				848F9B002EE26D7900668D64 /* SwiftViewController.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				845349A22EE123E600E7AA19 /* ZLProtoService_Example-Bridging-Header.h */,
 			);
 			name = "Example for ZLProtoService";
 			path = ZLProtoService;
@@ -253,6 +264,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = fanpeng;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 1620;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -286,6 +300,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				848F9B012EE26D7900668D64 /* SwiftViewController.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,9 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848F9B022EE26D7900668D64 /* SwiftViewController.swift in Sources */,
 				84EA1D962EDFF37E003D0084 /* ZLMainImpl.m in Sources */,
 				6003F59E195388D20070C39A /* ZLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZLViewController.m in Sources */,
+				845349A62EE1249200E7AA19 /* SwiftTestImpl.swift in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,12 +544,15 @@
 			baseConfigurationReference = DA7CD4E4EB8D6974995EEAF6 /* Pods-ZLProtoService_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLProtoService/ZLProtoService-Prefix.pch";
 				INFOPLIST_FILE = "ZLProtoService/ZLProtoService-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZLProtoService/ZLProtoService_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -543,12 +563,14 @@
 			baseConfigurationReference = C2DFC6F19CFC9B19EB34D991 /* Pods-ZLProtoService_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLProtoService/ZLProtoService-Prefix.pch";
 				INFOPLIST_FILE = "ZLProtoService/ZLProtoService-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZLProtoService/ZLProtoService_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
