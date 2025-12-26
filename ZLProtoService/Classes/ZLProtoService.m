@@ -132,11 +132,21 @@ static ZLProtoService *instance;
 }
 ///
 + (id)instanceForProtocol:(Protocol *)protocol shouldCache:(BOOL)shouldCache{
-    if(!protocol) return nil;
+    if(!protocol) {
+#if DEBUG
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"protocol不能为空" userInfo:nil];
+#endif
+        return nil;
+    }
     id impl = ZLProtoService.share.proto_impl_map[NSStringFromProtocol(protocol)];
     if (impl) return impl;
     Class cls = [self classForProtocol:protocol];
-    if(!cls) return nil;
+    if(!cls) {
+#if DEBUG
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"协议%@没有注册实现类",NSStringFromProtocol(protocol)] userInfo:nil];
+#endif
+        return nil;
+    }
     if ([cls conformsToProtocol:@protocol(ZLImplProto)]) {
         if ([cls respondsToSelector:@selector(share)]) {
             impl = [cls share];

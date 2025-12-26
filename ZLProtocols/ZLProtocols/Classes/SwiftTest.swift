@@ -13,10 +13,6 @@ import Foundation
 protocol SwiftTest: NSObjectProtocol {
     func getSwiftVC() -> UIViewController
 }
-@objc class SwiftTestImpl: NSObject,SwiftTest {
-    func getSwiftVC() -> UIViewController {
-        return SwiftViewController()
-    }
-}
+
 
 
