@@ -5,18 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/ZLProtoService.svg?style=flat)](https://cocoapods.org/pods/ZLProtoService)
 [![Platform](https://img.shields.io/cocoapods/p/ZLProtoService.svg?style=flat)](https://cocoapods.org/pods/ZLProtoService)
 
-## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-ZLProtoService is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
 
 ```ruby
+支持SPM导入和CocoaPods导入
 pod 'ZLProtoService'
 ```
 ### 注册协议与实现类
