@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLProtoService'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of ZLProtoService.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'ZLProtoService/Classes/**/*'
-  
+  s.resource_bundles = {'ZLProtoService' => ['ZLProtoService/Resources/PrivacyInfo.xcprivacy']}
+
   # s.resource_bundles = {
   #   'ZLProtoService' => ['ZLProtoService/Assets/*.png']
   # }
